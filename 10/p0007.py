@@ -1,20 +1,4 @@
 import math
-
-def eratosthenes(n):
-    table = []
-    i = 0
-    for i in range(100):
-        if i == 2 or i % 2 == 1:
-            table.append(1)
-        else:
-            table.append(0)
-    for i in range(3, int(math.sqrt(n)) + 1):
-        if table[i] == 0:
-            continue
-        for j in range(i + 1, n):
-            table[j] = 0
-    return table[n]
-
 def solve(goal, searchRange):
     table = []
     i = 0
